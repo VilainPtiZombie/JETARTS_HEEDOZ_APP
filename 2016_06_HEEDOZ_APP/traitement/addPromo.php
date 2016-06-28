@@ -1,4 +1,4 @@
-<?php // script de traitement addSlide
+<?php // script de traitement ajout de promo commerçant
 
 
 
@@ -22,14 +22,14 @@
   if(empty($_POST)){
 
     //on le renvoi vers la page d'ajout de slide
-    header('Location: addPromo.php');
+    header('Location: FormVide.php');
     exit();
   }
 
   //Pour le formulaire d'ajout de slide
   //on initialise les variables d'erreurs et de retour
   $error = false;
-  $errorUrl = 'addPromo.php?';
+  $errorUrl = 'Profil_com.php?';
 
   //si les titre sont vide
   if( empty($_POST['title'])){
@@ -95,9 +95,9 @@
   }else{//on ajoute dans la bd
 
     //on initialise les variables qui nous permettent de construire la requete avec le pseudo et le mot de pass de l'utilisateur
-    $insertCols = array('author', 'title', 'text', 'timer', 'timers', 'categorie');
+    $insertCols = array('author', 'title', 'text', 'timer', 'categorie');
     //$insertAliases = ':tifr, :tfr, :time';
-    $insertAliases = array(':auth' => $_POST['author'], ':tifr' => $_POST['title'], ':tfr' => $_POST['text'], ':time' => $_POST['timer'], ':tims' => $_POST['timerS'], ':cat' => $_POST['categorie']);
+    $insertAliases = array(':auth' => $_POST['author'], ':tifr' => $_POST['title'], ':tfr' => $_POST['text'], ':time' => $_POST['timer'], ':cat' => $_POST['categorie']);
 
 
     $sql = "insert into promo (". implode(", ", $insertCols) .") values(". implode(", ", array_keys($insertAliases) ) .")";
@@ -106,7 +106,7 @@
       $sql .= (($i == 0)?"":", ");
       $sql .= " ". $insertCols[$i] ."=". array_keys($insertAliases)[$i];
 
-      header('Location: ../addPromo.php');
+      
     }
     $sth = $dbh->prepare($sql, array(PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY));
     if($sth->execute($insertAliases)){
@@ -137,7 +137,9 @@
         }
       }
       //echo 'GG'. 
+      
       $dbh->lastInsertId();
+      header('Location: ../réussi.php');
     }else{
       
 //FILSDEP
