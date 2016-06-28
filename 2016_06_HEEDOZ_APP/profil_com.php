@@ -95,7 +95,7 @@ while ($promo = $rep->fetch())
 {
 ?>
         <ul class="col-xs-12">
-            <?php echo '<li class="col-xs-6">'. $promo['title'], $promo['timer'] .'</li>' ?>
+            <?php echo '<li class="col-xs-6">'. $promo['title'], $promo['timer'], $promo['timerS'] .'</li>' ?>
         </ul>
     </section>
  <?php
@@ -112,23 +112,23 @@ $reponse->closeCursor(); // Termine le traitement de la requête
 		<input type="hidden" name="author" value="<?php echo $_SESSION['username'] ?>">
 		<h3 class="col-xs-8">Titre</h3>
 		<p class="col-xs-8">
-			<input type="text" name="title" placeholder="Titre francais"/>
+			<input class="form-control" type="text" name="title" placeholder="Titre francais"/>
 		</p>
 
 		<h3 class="col-xs-8">Détails</h3>
 		<p class="col-xs-8">
-			<textarea name="text" placeholder="paragraphe francais"></textarea>
+			<textarea class="form-control" name="text" placeholder="paragraphe francais"></textarea>
 		</p>
 
-		<h3 class="col-xs-8">Durée</h3>
-                    <div class="col-xs-8">
-                        <input type="date" class="form-control" name="timer">
-                    </div>
-                
+		<h3 class="col-xs-12">Durée</h3>
+                    <p class="col-xs-8">
+                    <input type="date" class="form-control" name="timer">
+                    <input type="time" class="form-control" name="timerS">
+                    </p>
 
                 <h3 class="col-xs-8">Catégories</h3>
 		<p class="col-xs-8">
-			<input list="categorie" name="categorie" placeholder="Choisir une Catégorie">
+			<input class="form-control" list="categorie" name="categorie" placeholder="Choisir une Catégorie">
 			<datalist id="categorie">
 			    <option value="Informatique">
 			    <option value="Vetement">

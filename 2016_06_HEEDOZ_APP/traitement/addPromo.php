@@ -95,9 +95,9 @@
   }else{//on ajoute dans la bd
 
     //on initialise les variables qui nous permettent de construire la requete avec le pseudo et le mot de pass de l'utilisateur
-    $insertCols = array('author', 'title', 'text', 'timer', 'categorie');
+    $insertCols = array('author', 'title', 'text', 'timer', 'timerS', 'categorie');
     //$insertAliases = ':tifr, :tfr, :time';
-    $insertAliases = array(':auth' => $_POST['author'], ':tifr' => $_POST['title'], ':tfr' => $_POST['text'], ':time' => $_POST['timer'], ':cat' => $_POST['categorie']);
+    $insertAliases = array(':auth' => $_POST['author'], ':tifr' => $_POST['title'], ':tfr' => $_POST['text'], ':time' => $_POST['timer'], ':tims' => $_POST['timerS'], ':cat' => $_POST['categorie']);
 
 
     $sql = "insert into promo (". implode(", ", $insertCols) .") values(". implode(", ", array_keys($insertAliases) ) .")";
