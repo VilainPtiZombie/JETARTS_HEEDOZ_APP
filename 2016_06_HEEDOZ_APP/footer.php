@@ -1,10 +1,27 @@
+</main>
 
-      </div>
-    </div>
-<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.js'></script>
-  
-<script src="js/index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/1.13.0/mocha.min.js"></script>
+    <script>
+      mocha.setup('bdd');
+      var exports = null;
+      function assert(expr, msg) {
+        if (!expr) throw new Error(msg || 'failed');
+      }
+    </script>
+    <script src="js/dist/slideout.js"></script>
+    <script src="swipe/test.js"></script>
+    <script>
+      window.onload = function() {
+        document.querySelector('.js-slideout-toggle').addEventListener('click', function() {
+          slideout.toggle();
+        });
 
-</body>
+        document.querySelector('.menu').addEventListener('click', function(eve) {
+          if (eve.target.nodeName === 'A') { slideout.close(); }
+        });
+
+        var runner = mocha.run();
+      };
+    </script>
+  </body>
 </html>
