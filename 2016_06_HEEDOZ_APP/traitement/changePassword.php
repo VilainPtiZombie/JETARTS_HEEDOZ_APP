@@ -15,7 +15,7 @@ if(empty($_SESSION['username'])){
 if( empty($_POST) ){
 
 	//on renvoi vers la page de changement de mot de passe
-	header('Location: profile.php');
+	header('Location: profil.php');
 	exit();
 
 }
@@ -42,7 +42,7 @@ if(empty($_POST['password'])){
 }
 
 //on verifie que le nouveau mot de passe et la confirmation sont identique
-if($_POST['password'] != $_POST['confirmPassword']){
+if($_POST['password']{
 	header('Location: profile.php?confirmationPassword');
 	exit();
 }else{
@@ -52,7 +52,7 @@ $modif = $mysqli_query->prepare('UPDATE users SET password=:p WHERE id=:i');
 $modif->execute(array(':i'=>$_SESSION['id'],':p' => md5($_POST['password'])));
 
 //on le renvoi vers la page d'accueil du back office
-header('Location: index.php?&passwordchanged');
+header('Location: profil.php?&passwordchanged');
 exit();
 
 }//fin du script
