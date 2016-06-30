@@ -4,13 +4,18 @@
   include('header.php');
 ?>
 <body>
-<?php include('menu_swipe.php'); ?>
 
-  <h1 class="page_name">HEEDOZ</h1>
+
+  <h1 class="page_name">heedoz</h1>
+  
+    <div class="swipe_indice">
+    <img src="img/icone_swipe.png">
+  </div>
 
   <div id="carousel" class="carousel slide carousel-fade" data-ride="carousel">
     <ol class="carousel-indicators">
-        <li data-target="#carousel" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel" data-slide-to="0" class="active">
+        </li>
         <li data-target="#carousel" data-slide-to="1"></li>
         <li data-target="#carousel" data-slide-to="2"></li>
     </ol>
@@ -23,16 +28,24 @@
    
   </div>
 
+
+
   <div class="explore">
     <ul>
       <li>
-        <a href="categories.php">Les offres par catégories</a>
+        <a href="categories.php">
+        <img src="img/categories.png" style="width:10%">
+        Les offres par catégories</a>
       </li>
       <li>
-        <a href="favoris.php">Favoris</a>
+        <a href="favoris.php">
+        <img src="img/favoris.png" style="width:10%">
+        Favoris</a>
       </li>
       <li>
-        <a href="index.php">Autour de vous</a>
+        <a href="index.php">
+        <img src="img/autour.png" style="width:10%">
+        Autour de vous</a>
       </li>
     </ul>
   </div>

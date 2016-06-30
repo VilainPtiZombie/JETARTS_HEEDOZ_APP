@@ -28,8 +28,11 @@ include('header.php');
 ?>
 <body>
   
-  <h1 class="page_name">HEEDOZ</h1>
+      
       <div class="logmod">
+      <div>
+        <img src="img/login_logo.png">
+      </div>
   <div class="logmod__wrapper">
       <div class="logmod__container">
       <ul class="logmod__tabs">
@@ -42,20 +45,42 @@ include('header.php');
       <div class="logmod__tab-wrapper">
       <div class="logmod__tab lgm-1">
         <form action="" method="post" name="login">
+          <div class="login__form">
           <div class="login__row">
-            <img src="img/profil.png" style="width:7%">
             <input type="text" name="username" class="login__input name" placeholder="Pseudo"/>
           </div>
           <div class="login__row">
-            <img src="img/password.png" style="width:5%">
             <input type="password" name="password" class="login__input pass" placeholder="Mot de passe"/>
           </div>
-                  <input class="btn" name="submit" type="submit" value="Login" />
+          <div class="lost_mdp">
+              <a href="#">Mot de passe oublié</a>
+            </div>
+          </div>
+            
+           <div class="social_connect">
+          <ul>
+            <li>
+              <a href="#">
+                <img src="img/icone_facebook-02.png">
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="img/icone_twitter-02.png">
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="img/icone_googleplus-02.png">
+              </a>
+            </li>
+          </ul>
+          
+        </div>
+                  <input class="btn" name="submit" type="submit" value="CONNEXION" style="border-radius: 40px;padding-right: 15px;padding-left: 15px;font-size: 9px;" />
         </form>
       <div class="connect">
-        <p class="login__signup">
-          <a href="explore.php">Passer cette étape</a>
-        </p>
+       
         <a href="#">Terms and conditions</a>
       </div>
       </div>
@@ -66,19 +91,38 @@ include('header.php');
         <div class="logmod__tab lgm-2">
           <div class="login__form">
           <div class="login__row">
-            <img src="img/profil.png" style="width:7%">
             <input type="text" name="username" class="login__input name" placeholder="Pseudo"/>
           </div>
           <div class="login__row">
-            <img src="img/mail.png" style="width:7%">
             <input type="text" name="email" class="login__input mail" placeholder="Mail"/>
           </div>
           <div class="login__row">
-            <img src="img/password.png" style="width:5%">
             <input type="password" name="password" class="login__input pass" placeholder="Password"/>
           </div>
         </div>
-          <input class="btn" name="submit" type="submit" value="Inscription" />
+
+        <div class="social_connect">
+          <ul>
+            <li>
+              <a href="#">
+                <img src="img/icone_facebook-02.png">
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="img/icone_twitter-02.png">
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="img/icone_googleplus-02.png">
+              </a>
+            </li>
+          </ul>
+          
+        </div>
+
+          <input class="btn" name="submit" type="submit" value="CONNEXION" style="border-radius: 40px;padding-right: 15px;padding-left: 15px;font-size: 9px;"/>
       </form>
       <div class="connect">
         <p class="login__signup">

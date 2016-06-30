@@ -88,8 +88,7 @@
 .page_name {
   font-size: 40px;
   text-align: center;
-  border-bottom: solid 1px #000;
-  padding: 10px 0;
+  color: #ea384d;
 }
 
 
@@ -127,26 +126,61 @@ body,
   height: 100%;
 }
 .item:nth-child(1) {
-  background: #74C390;
+  background-image: url(../img/visuel_sac.jpg);
+  background-size: 100%;
 }
 .item:nth-child(2) {
-  background: #51BCE8;
+  background-image: url(../img/visuel_sac.jpg);
+  background-size: 100%;
 }
 .item:nth-child(3) {
-  background: #E46653;
+  background-image: url(../img/visuel_sac.jpg);
+  background-size: 100%;
 }
 
 #carousel{
   height: 60%;
 }
 
-.explore ul{
-  border-top: solid 1px #000;
+.swipe_indice{
+  position: absolute; 
+  z-index: 100000; 
+  top:38%;
+  margin-left: 10px;
+  opacity: .5;
+}
+
+.swipe_indice img{
+  width: 20%; 
+}
+
+.explore a{
+  color: #ea384d;
+  text-transform : uppercase;
+  font-size: 12px;
 }
 
 .explore li{
   list-style: none;
-  margin: 27px;
+  padding-top: 17px;
+  padding-bottom: 17px;
+  padding-left: 60px;
+}
+
+.explore li img{
+  padding-right: 10px;
+}
+
+.explore li:nth-child(1){
+    border-bottom: solid 1px #dadada ;
+}
+
+.explore li:nth-child(2){
+    border-bottom: solid 1px #dadada;
+}
+
+.explore ul{
+  padding-left: 0px;
 }
 
 #timer {
@@ -520,8 +554,6 @@ margin-left: 98px;
 }
 
 
-
-
 .logmod {
   display: block;
   position: fixed;
@@ -531,16 +563,53 @@ margin-left: 98px;
   left: 0;
   opacity: 1;
   z-index: 1;
-  background: rgba(0, 0, 0, 0.2);
+  background-image: url(../img/bg_login.jpg);
+  background-size: 100%;
+  background-position-y: -11em;
+  background-repeat: no-repeat;
 }
 
-.logmod__wrapper {
-  display: block;
-  position: relative;
-  max-width: 459px;
-  border-radius: 4px;
-    margin: 73px auto;
+.logmod img{
+  width: 41%;
+  margin-left: 29%;
+  margin-top: 8%;
 }
+
+.lost_mdp{
+  padding-top: 22px;
+}
+
+.lost_mdp a{
+  color: #fff;
+  font-size: 10px;
+}
+.lost_mdp a:hover{
+  color: #fff;
+}
+
+.social_connect{
+  width: 82%;
+}
+
+.social_connect ul{
+  float: right;
+  margin: 17px 0;
+}
+
+.social_connect li{
+  list-style: none;
+  float: left;
+  width: 33%; 
+}
+
+.social_connect img{
+  width: 38%;
+}
+
+.connect{
+  font-size: 9px;
+}
+
 .logmod__close {
   display: block;
   position: absolute;
@@ -585,29 +654,43 @@ margin-left: 98px;
   display: table;
 }
 .logmod__tabs li.current a {
-  border-bottom: solid #000 2px;
-  color: #333;
+  border-bottom: dashed #ea384d 2px;
+  color: #fff;
 }
 .logmod__tabs li a {
-  width: 50%;
   position: relative;
   float: left;
   text-align: center;
   line-height: 72px;
-  height: 72px;
+  height: 53px;
   text-decoration: none;
-  color: #809191;
+  color: #ea384d;
   text-transform: uppercase;
   font-weight: 700;
-  font-size: 13px;
+  font-size: 9px;
   cursor: pointer;
 }
+
+.logmod__tabs a{
+  width: 44%;
+}
+
+.logmod__tabs{
+  margin-left: 13%;
+}
+
 .logmod__tabs li a:focus {
   outline: dotted 1px;
 }
 
 .logmod__form {
   border-top: 1px solid #e5e5e5;
+}
+
+.btn{
+  background-color: #ea384d;
+  color: #fff;
+  font-size: 9px;
 }
 
 
@@ -619,38 +702,36 @@ html {
   font-family: "Lato", sans-serif;
 }
 
-
-
-
 input, button{
   outline: none;
 border: none;
 }
 
-.login__form{
-top: 50%;
-left: 0;
-width: 80%;
-height: 50%;
-padding: 1.5rem 2.5rem;
-text-align: center;
+.logmod__container{
+  width: 100%;
+  text-align: center;
+
 }
 
 .login__input{
   display: inline-block;
-width: 15rem;
-height: 100%;
-padding-left: 2.5rem;
-font-size: 13px;
-background: transparent;
-color: #FDFCFD;
+  width: 24rem;
+  height: 100%;
+  font-size: 13px;
+  background: transparent;
+  color: #FDFCFD;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.login__form{
+  height: 196px;
 }
 
 .login__row{
-height: 5rem;
-padding-top: 1rem;
-border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  height: 5rem;
+  padding-top: 1rem;
 }
+
 
 .login__row img{
   position: absolute;
@@ -667,10 +748,12 @@ border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 
 .connect{
   text-align: center;
+  margin-top: 20%;
 }
 
 .connect a{
   margin-top: 10px;
+  color: #ea384d;
 }
 
 .profil_infos {
