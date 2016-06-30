@@ -25,22 +25,22 @@
       <div id="sidebar">
           <ul>
               <li>
-              <a href="#"><img src="img/profil.png">Mon Profil</a>
+                <a href="profil.php"><img src="img/profil.png">Mon Profil</a>
               </li>
               <li>
-              <a href="#"><img src="img/profil.png">Explorer</a>
+                <a href="map.php"><img src="img/profil.png">Explorer</a>
               </li>
               <li>
-              <a href="#"><img src="img/profil.png">Catégories</a>
+                <a href="categories.php"><img src="img/profil.png">Catégories</a>
               </li>
               <li>
-              <a href="#"><img src="img/profil.png">Paramètres</a>
+                <a href="#"><img src="img/profil.png">Paramètres</a>
               </li>
               <li>
-              <a href="#"><img src="img/profil.png">Effacer la mémoire cache</a>
+                <a href="#"><img src="img/profil.png">Effacer la mémoire cache</a>
               </li>
               <li>
-              <a href="#"><img src="img/profil.png">Déconnexion</a>
+                <a href="logout.php"><img src="img/profil.png">Déconnexion</a>
               </li>
           </ul>
       </div>
