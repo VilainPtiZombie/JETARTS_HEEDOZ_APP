@@ -24,5 +24,5 @@
         <script src="js/index.js"></script>
         <script type="text/javascript" src="js/jquery.touchSwipe.min.js"></script>
 </head>
-<?php include('swipe/swipe.php'); ?>
+
 
