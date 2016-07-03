@@ -22,6 +22,13 @@
 
         var runner = mocha.run();
       };
+
+      
+
+$( ".admin-text" ).on( "click", function()
+{
+    $( ".menu_promo" ).stop().fadeToggle( "fast" );
+});
     </script>
   </body>
 </html>

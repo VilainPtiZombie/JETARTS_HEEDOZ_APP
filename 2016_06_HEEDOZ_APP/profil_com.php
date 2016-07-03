@@ -23,7 +23,7 @@
 
 <!-- BODY -->
 <body class="wrapper">
-<?php include('menu_swipe.php') ?>
+
 <?php
 try
 {
@@ -45,7 +45,10 @@ $reponse = $bdd->query('SELECT * FROM users WHERE username=\'' . $_SESSION['user
 while ($donnees = $reponse->fetch())
 {
 ?>
-    <h1 class="page-header col-xs-12"> heedoz </h1>
+    <div class="back_map">
+                <a href="#"><img src="img/fleche_retour-02.png"></a>
+                <h1 class="page_profil">heedoz</h1>
+            </div>
    <!-- Profil_Commerçant --> 
    
     <section class="Commercant_profile col-xs-12">
@@ -72,7 +75,7 @@ $reponse->closeCursor(); // Termine le traitement de la requête
 ?>   
     <!-- Promo_EnCours --> 
     <section class="Promo_EnCours col-xs-12">
-        <h2 class="Title_EnCours col-xs-4">Actuellement Chez Vous</h2>
+        <h2 class="Title_EnCours col-xs-12">Actuellement Chez Vous</h2>
         <?php 
 try
 {
@@ -94,7 +97,7 @@ $rep = $bdd->query('SELECT * FROM promo WHERE author=\'' . $_SESSION['username']
 while ($promo = $rep->fetch())
 {
 ?>
-        <ul class="col-xs-12">
+        <ul class="col-xs-12 prod_com" style="padding-left: 0px;padding-right: 0px;"> 
             <?php echo '<li class="col-xs-6">'. $promo['title'], $promo['timer'], $promo['timerS'] .'</li>' ?>
         </ul>
     </section>
@@ -106,29 +109,34 @@ $reponse->closeCursor(); // Termine le traitement de la requête
 
     <!-- Add_Promo_Commerçant --> 
     <section class="col-xs-12 Add_Promo">
-	<h2 class="page-header col-xs-12">Crée une Nouvelle Promoz</h2>
+    <div class=" content_prod ">
+    <div class=" admin-text">
+        <img class="more_promo" src="img/more_promo.png">
+	<h2 class="page-header col-xs-12">Créer une Nouvelle Promo</h2>
+	</div>
+	</div>	
 
-	<form action="traitement/addPromo.php" method="POST" enctype="multipart/form-data">
+	<form class="menu_promo" action="traitement/addPromo.php" method="POST" enctype="multipart/form-data">
 		<input type="hidden" name="author" value="<?php echo $_SESSION['username'] ?>">
 		<h3 class="col-xs-8">Titre</h3>
 		<p class="col-xs-8">
-			<input class="form-control" type="text" name="title" placeholder="Titre francais"/>
+			<input class="create_promo_custom" type="text" name="title" placeholder="Titre francais"/>
 		</p>
 
 		<h3 class="col-xs-8">Détails</h3>
 		<p class="col-xs-8">
-			<textarea class="form-control" name="text" placeholder="paragraphe francais"></textarea>
+			<textarea class="create_promo_custom_details" name="text" placeholder="paragraphe francais"></textarea>
 		</p>
 
 		<h3 class="col-xs-12">Durée</h3>
                     <p class="col-xs-8">
-                    <input type="date" class="form-control" name="timer">
-                    <input type="time" class="form-control" name="timerS">
+                    <input type="date" class="create_promo_custom" name="timer" placeholder="ddddmmyyyy">
+                    <input type="time" class="create_promo_custom" name="timerS" placeholder="00:00:00">
                     </p>
 
                 <h3 class="col-xs-8">Catégories</h3>
 		<p class="col-xs-8">
-			<input class="form-control" list="categorie" name="categorie" placeholder="Choisir une Catégorie">
+			<input class="create_promo_custom" list="categorie" name="categorie" placeholder="Choisir une Catégorie">
 			<datalist id="categorie">
 			    <option value="Informatique">
 			    <option value="Vetement">
@@ -146,11 +154,12 @@ $reponse->closeCursor(); // Termine le traitement de la requête
 			(1Mo max, format autorisé : jpg, jpeg, png ou gif)
 		</p>
 		
-		<p class="col-xs-8">
-			<input type="submit" value="Ajouter"/>
+		<p class="col-xs-8 ajout_promo">
+			<input class="ajout_promo_button" type="submit" value="Ajouter"/>
 		</p>
 		
 	</form>
+	</div>
     </section>
    <!-- Fin_add_Promo_Commerçant --> 
    

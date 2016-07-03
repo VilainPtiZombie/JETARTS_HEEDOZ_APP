@@ -6,7 +6,9 @@
 <body>
 
 
-  <h1 class="page_name">heedoz</h1>
+  <div class="back_map">
+            <h1 class="page_profil">heedoz</h1>
+        </div>
   
     <div class="swipe_indice">
     <img src="img/icone_swipe.png">

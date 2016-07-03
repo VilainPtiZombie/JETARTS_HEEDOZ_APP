@@ -8,41 +8,49 @@ include('header.php');
 ?>
 <body>
   
-  <h1 class="page_name">HEEDOZ</h1>
+  <div class="back_map">
+          <a href="#"><img src="img/fleche_retour-blanc.png"></a>
+          <h1 class="page_profil"  style="color: #fff;background-color: #ea384d;font-size: 17px; height: 49px; padding-top: 15px; margin-bottom: 0px;">heedoz</h1>
+      </div>
 
   <div class="profil_infos">
     <p>
       Samantha Jones
     </p>
-    <img src="img/profil.png" style="width:16%">
-    <img id="settings" src="img/settings.png" style="width:4%">
+    <img class="avatar" src="img/photo_profil.jpg" style="width:22%">
+    <img id="settings" src="img/settings_white.png" style="width:4%">
     <a href="#">modifier</a>
   </div>
 
   <div class="historique">
     <h2>Historique de mes achats</h2>
     <ul class="timeline">
-    <li class="event">
-      <h3>Jeudi 9 Juin 2016</h3>
-      <p class="article">FNAC paris 17ème - Offre -50 % sur les cables HDMI / micro HDMI pour tablette & smartphone 1.5m</p>
-      <p class="price">3,5€</p>
-    </li>
-    <li class="event">
-      <h3>Jeudi 9 Juin 2016</h3>
-      <p class="article">FNAC paris 17ème - Offre -50 % sur les cables HDMI / micro HDMI pour tablette & smartphone 1.5m</p> 
-      <p class="price">3,5€</p>  
-    </li>
-    <li class="event">
-      <h3>Jeudi 9 Juin 2016</h3>
-      <p class="article">FNAC paris 17ème - Offre -50 % sur les cables HDMI / micro HDMI pour tablette & smartphone 1.5m</p>   
-      <p class="price">3,5€</p>
-    </li>
-    <li class="event">
-      <h3>Jeudi 9 Juin 2016</h3>
-      <p class="article">FNAC paris 17ème - Offre -50 % sur les cables HDMI / micro HDMI pour tablette & smartphone 1.5m</p> 
-      <p class="price">3,5€</p>  
-    </li>
-  </ul>
+        <li class="event">
+          <h3>Jeudi 9 Juin 2016</h3>
+          <p class="article">FNAC paris 17ème - Offre -50 % sur les cables HDMI / micro HDMI pour tablette & smartphone 1.5m</p>
+          <p class="price">3,50€</p>
+        </li>
+        <li class="event">
+          <h3>Jeudi 9 Juin 2016</h3>
+          <p class="article">FNAC paris 17ème - Offre -50 % sur les cables HDMI / micro HDMI pour tablette & smartphone 1.5m</p>
+          <p class="price">3,50€</p>
+        </li>
+        <li class="event">
+          <h3>Jeudi 9 Juin 2016</h3>
+          <p class="article">FNAC paris 17ème - Offre -50 % sur les cables HDMI / micro HDMI pour tablette & smartphone 1.5m</p>
+          <p class="price">3,50€</p>
+        </li>
+        <li class="event">
+          <h3>Jeudi 9 Juin 2016</h3>
+          <p class="article">FNAC paris 17ème - Offre -50 % sur les cables HDMI / micro HDMI pour tablette & smartphone 1.5m</p>
+          <p class="price">3,50€</p>
+        </li>
+        <li class="event">
+           <h3>Jeudi 9 Juin 2016</h3>
+           <p class="article">FNAC paris 17ème - Offre -50 % sur les cables HDMI / micro HDMI pour tablette & smartphone 1.5m</p>
+           <p class="price">3,50€</p>
+        </li>
+      </ul>
   </div>
 
 <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
