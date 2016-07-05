@@ -4,58 +4,108 @@
 include('header.php');
 ?>
 <body>
+<?php 
+  include('menu.php');
+?>
+<a class="arrow-wrap" href="#">
+  <img class="arrow" src="img/chevron_favoris.png"></img>
+</a>
 
-  <div class="container">
-    <div id="nav">
-      <img class="back" src="img/back.png" style="width:7%">
-      <h1 class="page_name">FAVORIS</h1>
-      <img class="search" src="img/search.png">
-      <img class="time" src="img/time.png" style="width:14%">
-    </div>
-
-      
-    <div class="promo">
-
-      <p>Fin de l'offre dans 14 minutes</p>
-
-      <h2>Pimkie</h2>
-
-      <p id="promo_montant">8€ de réduction dès 30€ d'achat !</p>
-
-      <div id='map' class='map localisation'> </div>
-      
-      <div class="offre">
-        <a href="">Profiter de l'offre</a>
-        <p>64 personnes ont déjà profitées de l'offre.</p>
-      </div>
-
-    </div>
-    <div class="promo">
-      <p>Fin de l'offre dans 14 minutes</p>
-
-      <h2>Nature et découverte</h2>
-
-      <p id="promo_montant">8€ de réduction dès 30€ d'achat !</p>
-
-      <div class="description">
-        <p id="promo_montant"> Pour 2 boîtes de thés et tisanes achetées la troisièmes est offerte !</p>
-      </div>
-      
-      <div class="offre">
-        <a href="">Profiter de l'offre</a>
-        <p>64 personnes ont déjà profitées de l'offre.</p>
-      </div>
-
-    </div>
-
-
+  <div class="back_map back_categories">
+    <a href="index.php"><img src="img/fleche_retour-02.png"></a>
+    <h1 class="page_categories">Favoris</h1>
+  </div>
+  <div class="search_icon">
+    <img src="img/search_favoris.png">
   </div>
 
-  <div class="iphone"></div>
+  <div class="border_sample">
+    <div class="sample">
+      <img id="sample_logo" src="img/logo_pimkie.png">
+      <p id="timer_offre_favoris">Fin de l'offre dans 14 min !</p>
+      <img class="sample_icon_timer" src="img/sablier_white.png" style="width: 13%;">
+      <p id="sample_montant"">8€ de réduction dès 30% d'achat !</p>
+    </div>
+    <div class="link_infos">
+      <a href="#" class="more_infos">Plus d'informations</a>
+    </div>
+  </div>
 
-<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.js'></script>
-  
+
+  <div class="border_sample">
+    <div class="sample">
+      <img id="sample_logo" src="img/logo_pimkie.png">
+      <p id="timer_offre_favoris">Fin de l'offre dans 14 min !</p>
+      <img class="sample_icon_timer" src="img/sablier_white.png" style="width: 13%;">
+      <p id="sample_montant"">8€ de réduction dès 30% d'achat !</p>
+    </div>
+    <div class="link_infos">
+      <a href="#" class="more_infos">Plus d'informations</a>
+    </div>
+  </div>
+
+  <div class="border_sample">
+    <div class="sample">
+      <img id="sample_logo" src="img/logo_pimkie.png">
+      <p id="timer_offre_favoris">Fin de l'offre dans 14 min !</p>
+      <img class="sample_icon_timer" src="img/sablier_white.png" style="width: 13%;">
+      <p id="sample_montant"">8€ de réduction dès 30% d'achat !</p>
+    </div>
+    <div class="link_infos">
+      <a href="#" class="more_infos">Plus d'informations</a>
+    </div>
+  </div>
+
+  <div class="border_sample">
+    <div class="sample">
+      <img id="sample_logo" src="img/logo_pimkie.png">
+      <p id="timer_offre_favoris">Fin de l'offre dans 14 min !</p>
+      <img class="sample_icon_timer" src="img/sablier_white.png" style="width: 13%;">
+      <p id="sample_montant"">8€ de réduction dès 30% d'achat !</p>
+    </div>
+    <div class="link_infos">
+      <a href="#" class="more_infos">Plus d'informations</a>
+    </div>
+  </div>
+
+  <div class="border_sample">
+    <div class="sample">
+      <img id="sample_logo" src="img/logo_pimkie.png">
+      <p id="timer_offre_favoris">Fin de l'offre dans 14 min !</p>
+      <img class="sample_icon_timer" src="img/sablier_white.png" style="width: 13%;">
+      <p id="sample_montant"">8€ de réduction dès 30% d'achat !</p>
+    </div>
+    <div class="link_infos">
+      <a href="#" class="more_infos">Plus d'informations</a>
+    </div>
+  </div>
+
+
+
+<script>
+  //this is where we apply opacity to the arrow
+  $(window).scroll( function(){
+
+    //get scroll position
+    var topWindow = $(window).scrollTop();
+    //multipl by 1.5 so the arrow will become transparent half-way up the page
+    var topWindow = topWindow * 1;
+
+    //get height of window
+    var windowHeight = $(window).height();
+
+    //set position as percentage of how far the user has scrolled
+    var position = topWindow / windowHeight;
+    //invert the percentage
+    position = 1 - position;
+
+    //define arrow opacity as based on how far up the page the user has scrolled
+    //no scrolling = 1, half-way up the page = 0
+    $('.arrow-wrap').css('opacity', position);
+
+  });
+
+</script>
 <script src="js/index.js"></script>
 
 </body>
