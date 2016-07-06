@@ -1,0 +1,36 @@
+body{
+	margin: 0;
+	background: url(../img/background.jpg) no-repeat;
+	background-position-x: 77%;
+	background-size: auto;
+}
+
+h1{
+	text-transform: uppercase;
+	color: #ea384d;
+	font-family: 'Monserrat';
+	font-size: 3em;	
+	margin-bottom: 0;
+}
+
+p{
+	color: #fff;
+	font-size: 1.5em;
+	font-size:'Quicksand';
+	margin-top: 0;
+	margin-bottom: 10%;
+}
+
+a{
+	background: #ea384d;
+	color: #FFF;
+	padding: 17px;
+	border-radius: 1.5em;
+	text-decoration: none;
+}
+
+#erreur{
+	left: 10%;
+	position: absolute;
+	top: 35%;
+}
